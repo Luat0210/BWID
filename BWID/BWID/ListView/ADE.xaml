@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <ViewCell.View>
+
+        <StackLayout Margin="5,0,5,0">
+            <BoxView BackgroundColor="Silver" HeightRequest="1">
+
+            </BoxView>
+            <Grid Margin="5" RowSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Line:" FontAttributes="Bold">
+
+                </Label>
+                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="#_LineNo_#" FontAttributes="Bold">
+
+                </Label>
+                <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Description:">
+
+                </Label>
+                <Label Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="#_PurposeOfExp_#">
+
+                </Label>
+                <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Budget Code:">
+
+                </Label>
+                <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_BudgetCode, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.LA.BudgetCode|._#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                </Label>
+                <Label Grid.Row="3" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Amount:">
+
+                </Label>
+                <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_Amount, Converter=#S_SValue_#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                </Label>
+                <Label Grid.Row="4" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Notes:">
+
+                </Label>
+                <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_Notes_#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+            </Grid>
+
+        </StackLayout>
+
+    </ViewCell.View>
+
+</ViewCell>

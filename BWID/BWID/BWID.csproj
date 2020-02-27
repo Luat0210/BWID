@@ -1,0 +1,126 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Dashboard\HOME.xaml.cs">
+      <DependentUpon>HOME.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Dashboard\APPROVAL_TYPE.xaml.cs">
+      <DependentUpon>APPROVAL_TYPE.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\ADH_TAFAD.xaml.cs">
+      <DependentUpon>ADH_TAFAD.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\PI_PRFAD.xaml.cs">
+      <DependentUpon>PI_PRFAD.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\PEV_CCA.xaml.cs">
+      <DependentUpon>PEV_CCA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\PEV_BEX.xaml.cs">
+      <DependentUpon>PEV_BEX.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\PEV_BCA.xaml.cs">
+      <DependentUpon>PEV_BCA.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\RENTCTR.xaml.cs">
+      <DependentUpon>RENTCTR.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\RECTR.xaml.cs">
+      <DependentUpon>RECTR.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="FormMD\PO_POFAD.xaml.cs">
+      <DependentUpon>PO_POFAD.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\HISTORY.xaml.cs">
+      <DependentUpon>HISTORY.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\ATTACHMENT.xaml.cs">
+      <DependentUpon>ATTACHMENT.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\ADE.xaml.cs">
+      <DependentUpon>ADE.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\HRLOG.xaml.cs">
+      <DependentUpon>HRLOG.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\PMNOTE.xaml.cs">
+      <DependentUpon>PMNOTE.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\PI_PRPCD.xaml.cs">
+      <DependentUpon>PI_PRPCD.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\TASK.xaml.cs">
+      <DependentUpon>TASK.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListView\POPOD.xaml.cs">
+      <DependentUpon>POPOD.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Dashboard\HOME.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dashboard\APPROVAL_TYPE.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\ADH_TAFAD.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\PI_PRFAD.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\PEV_CCA.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\PEV_BEX.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\PEV_BCA.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\RENTCTR.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\RECTR.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormMD\PO_POFAD.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\HISTORY.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\ATTACHMENT.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\ADE.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\HRLOG.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\PMNOTE.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\PI_PRPCD.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\TASK.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ListView\POPOD.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

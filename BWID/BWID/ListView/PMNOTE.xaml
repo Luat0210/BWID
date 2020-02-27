@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <ViewCell.View>
+
+        <StackLayout Margin="5,0,5,0">
+            <BoxView BackgroundColor="Silver" HeightRequest="1">
+
+            </BoxView>
+            <Grid Margin="5" RowSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Line:" FontAttributes="Bold">
+
+                </Label>
+                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="#_LineNo_#" FontAttributes="Bold">
+
+                </Label>
+                <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Departing from:">
+
+                </Label>
+                <Label Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_Description_#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                </Label>
+                <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="From Date:">
+
+                </Label>
+                <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_NoteDate1, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                </Label>
+
+                <Label Grid.Row="3" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Arriving at:">
+
+                </Label>
+                <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_ExtDesc1_#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                </Label>
+
+                <Label Grid.Row="4" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="To Date:">
+
+                </Label>
+                <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_NoteDate2, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+
+                </Label>
+                <Label Grid.Row="5" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Mode of travel:">
+
+                </Label>
+                <Label Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="#_ExtDesc2_#">
+
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+            </Grid>
+
+        </StackLayout>
+
+    </ViewCell.View>
+
+</ViewCell>

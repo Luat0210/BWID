@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PBSMobileApp.ViewCell1">
+    <ViewCell.View>
+        <StackLayout Padding="0.5">
+            <BoxView HeightRequest="1" BackgroundColor="Silver"></BoxView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="15"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <StackLayout>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Converter={StaticResource SFormula}, ConverterParameter='If([TaskStatus]= \'RELEASE\',\'APPROVED\',[TaskStatus])'}"
+                                                  TextColor="{Binding Converter={StaticResource GetColor}, ConverterParameter=[TaskStatus]}" FontAttributes="Bold"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Column="1" HorizontalOptions="End">
+                            <StackLayout Spacing="2">
+                                <Label HorizontalOptions="End" TextColor="Silver" FontSize="Small">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="  {Binding TaskDate, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label Text="#_ProcessedTime_#" HorizontalOptions="End" TextColor="Silver" FontSize="Small"></Label>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                    
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <StackLayout>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Processed By: " FontAttributes="Bold"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <StackLayout>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding ProcessedBy, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.HR.EMP|Description'}"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <StackLayout>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Comments: " FontAttributes="Bold"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <StackLayout>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="#_Notes_#"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackLayout BackgroundColor="{Binding Converter={StaticResource GetColor}, ConverterParameter=[TaskStatus]}">
+                        <Label Text=" " BackgroundColor="{Binding Converter={StaticResource GetColor}, ConverterParameter=[TaskStatus]}"></Label>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

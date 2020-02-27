@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+xmlns:db="clr-namespace:SPC.Views.Dashboard" 
+xmlns:con="clr-namespace:SPC.Views.BaseView.Containers"
+             >
+    <StackLayout>
+        <db:SearchGadget ListName="LTask"/>
+
+        <db:SListGadget x:Name="LTask" DataUrl="SPC.BO.WF.TasksSummary">
+
+            <!--Built in Cells-->
+            <db:SListGadget.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+                        <ViewCell.View>
+
+                            <StackLayout>
+                                <BoxView HeightRequest="0.5" BackgroundColor="Silver"></BoxView>
+                                <Grid RowSpacing="0" ColumnSpacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="140"/>
+                                        <ColumnDefinition Width="10"/>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" FontAttributes="Bold" FontSize="Default">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="#_EntityCode_#"></Span>
+                                                <Span Text=". " ></Span>
+                                                <Span Text="#_EntityName_#"></Span>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <buttons:SfButton Grid.Column="1" Grid.Row="0" Text="{Binding Converter ={StaticResource FormatText}, ConverterParameter = 'Pending Task: [Pendings]'}" BackgroundColor="#3498DB"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"            
+Command="{Binding Converter={StaticResource UrlCommand}, ConverterParameter='SPC.BO.WF.Tasks/bwdwft?$entity=[EntityCode]'}">
+                                    </buttons:SfButton>
+                                    <Label Grid.Column="2" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Default" Text=">" TextColor="Silver">
+                                    </Label>
+
+
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </db:SListGadget.ItemTemplate>
+
+        </db:SListGadget>
+    </StackLayout>
+</ContentPage>

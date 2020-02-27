@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:db="clr-namespace:SPC.Views.Dashboard" 
+xmlns:con="clr-namespace:SPC.Views.BaseView.Containers"
+             >
+    <StackLayout>
+        <db:SearchGadget ListName="ApprovalType"/>
+
+        <db:SListGadget x:Name="ApprovalType" DataUrl="pbs.BO.Lookup?LookupCategory=FORMG">
+
+            <!--Built in Cells-->
+            <db:SListGadget.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+                        <ViewCell.View>
+
+                            <StackLayout>
+                                <BoxView HeightRequest="0.5" BackgroundColor="Silver"></BoxView>
+                                <Grid RowSpacing="0" ColumnSpacing="0" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*" />
+                                        <ColumnDefinition Width="1.8*"/>
+                                        <ColumnDefinition Width="0.2*"/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" FontAttributes="Bold" FontSize="Default">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="#_Code_#"></Span>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+
+                                    <Label Grid.Column="1" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" FontAttributes="Bold" FontSize="Default">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="#_Descriptn_#"></Span>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Button Grid.Column="2" Grid.Row="0" FontSize="Default"
+Command="{Binding Converter={StaticResource UrlCommand}, ConverterParameter='SPC.BO.WF.Tasks/bwdwft?$entity=[EntityCode]'}" Text="{Binding Converter ={StaticResource FormatText}, ConverterParameter = '1 >'} }"    
+                                                                                     />
+
+
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </db:SListGadget.ItemTemplate>
+
+        </db:SListGadget>
+    </StackLayout>
+</ContentPage>

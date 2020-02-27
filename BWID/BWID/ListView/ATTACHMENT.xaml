@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <ViewCell.View>
+
+        <StackLayout Margin="5,0,5,0">
+            <BoxView BackgroundColor="Silver" HeightRequest="1">
+
+            </BoxView>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="FillAndExpand">
+                    <Image Source="{Binding Converter={StaticResource Image}, ConverterParameter ='Miscellaneous/Content'}"/>
+
+
+                </StackLayout>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="#_Title_#" HorizontalOptions="StartAndExpand">
+                        
+                    </Label>
+                    <Label Grid.Row="1" HorizontalOptions="StartAndExpand" TextColor="Gray" FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="#_Updated, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#">
+                                    
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+
+                    </Label>
+                </Grid>
+                
+  
+
+
+            </Grid>
+
+        </StackLayout>
+
+    </ViewCell.View>
+
+</ViewCell>
