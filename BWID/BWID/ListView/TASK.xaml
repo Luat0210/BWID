@@ -23,7 +23,7 @@
                     <Label Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"  FontSize="Medium" FontAttributes="Bold">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="#_PbfCode, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.PBF|Descriptn_#">
+                                <Span Text="{Binding PbfCode, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.PBF|Descriptn'}">
                                 </Span>
                             </FormattedString>
                         </Label.FormattedText>
@@ -32,7 +32,7 @@
                         <Label.FormattedText>
                             <FormattedString>
 
-                                <Span Text="#_DocumentDate, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#" TextColor="Gray">
+                                <Span Text="{Binding DocumentDate, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}" TextColor="Gray">
                                 </Span>
                             </FormattedString>
                         </Label.FormattedText>
@@ -66,7 +66,7 @@
                     <Label Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" FontSize="Medium">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="#_DocValue1, Converter=#S_SValue_#, Converterparameter=#,###.00_#">
+                                <Span Text="{Binding DocValue1, Converter={StaticResource SValue}, ConverterParameter='#,###.##'}">
                                 </Span>
                             </FormattedString>
                         </Label.FormattedText>
@@ -75,7 +75,7 @@
                         <Label.FormattedText>
                             <FormattedString>
 
-                                <Span Text="#_Originator, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.HR.EMP|Description_#" TextColor="Gray">
+                                <Span Text="{Binding Originator, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.HR.EMP|Description'}" TextColor="Gray">
                                 </Span>
                             </FormattedString>
                         </Label.FormattedText>

@@ -41,7 +41,7 @@
                 <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_BudgetCode, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.LA.BudgetCode|._#">
+                            <Span Text="{Binding BudgetCode, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.LA.BudgetCode|.'}">
 
                             </Span>
                         </FormattedString>
@@ -54,7 +54,7 @@
                 <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_Quantity, Converter=#S_SValue_#">
+                            <Span Text="{Binding Quantity, Converter={StaticResource SValue}, ConverterParameter='#,###.##'}">
 
                             </Span>
                         </FormattedString>
@@ -67,7 +67,7 @@
                 <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_PurchasePrice, Converter=#S_SValue_#">
+                            <Span Text="{Binding PurchasePrice, Converter={StaticResource SValue}, ConverterParameter='#,###.##'}">
 
                             </Span>
                         </FormattedString>
@@ -80,7 +80,7 @@
                 <Label Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_LineValue, Converter=#S_SValue_#">
+                            <Span Text="{Binding LineValue, Converter={StaticResource SValue}, ConverterParameter='#,###.##'}">
 
                             </Span>
                         </FormattedString>
@@ -112,7 +112,7 @@
                             <Span  Text=" - ">
                                 
                             </Span>
-                            <Span Text="#_ExtDate4, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#">
+                            <Span Text="{Binding ExtDate4, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}">
                                 
                             </Span>
                         </FormattedString>

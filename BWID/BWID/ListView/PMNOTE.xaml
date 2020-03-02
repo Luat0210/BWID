@@ -47,7 +47,7 @@
                 <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_NoteDate1, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#">
+                            <Span Text="{Binding NoteDate1, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}">
 
                             </Span>
                         </FormattedString>
@@ -75,7 +75,7 @@
                 <Label Grid.Row="4" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_NoteDate2, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#">
+                            <Span Text="{Binding NoteDate2, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}">
 
                             </Span>
                         </FormattedString>

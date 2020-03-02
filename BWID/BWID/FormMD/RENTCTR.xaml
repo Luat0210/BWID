@@ -45,7 +45,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                                         <Label.FormattedText>
                                             <FormattedString>
 
-                                                <Span Text="#_ContrDate, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#" TextColor="Gray">
+                                                <Span Text="{Binding ContrDate, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}" TextColor="Gray">
                                                 </Span>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -79,7 +79,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                                     <Label Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" FontSize="Small" FontAttributes="Bold">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="#_UnitPrice, Converter=#S_SValue_#">
+                                                <Span Text="{Binding UnitPrice, Converter={StaticResource SValue}, ConverterParameter='#,###.##'}">
                                                 </Span>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -88,7 +88,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                                         <Label.FormattedText>
                                             <FormattedString>
 
-                                                <Span Text="#_EmplId, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.HR.EMP|Description_#" TextColor="Gray">
+                                                <Span Text="{Binding EmplId, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.HR.EMP|Description'}" TextColor="Gray">
                                                 </Span>
                                             </FormattedString>
                                         </Label.FormattedText>

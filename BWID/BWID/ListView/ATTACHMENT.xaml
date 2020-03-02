@@ -32,7 +32,7 @@
                     <Label Grid.Row="1" HorizontalOptions="StartAndExpand" TextColor="Gray" FontSize="Small">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="#_Updated, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#">
+                                <Span Text="{Binding Updated, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}">
                                     
                                 </Span>
                             </FormattedString>

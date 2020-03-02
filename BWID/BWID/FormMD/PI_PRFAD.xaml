@@ -36,7 +36,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                                     <Label Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"  FontSize="Small" FontAttributes="Bold">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="#_InvoiceType, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.PBF|Descriptn_#">
+                                                <Span Text="{Binding InvoiceType, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.PBF|Descriptn'}">
                                                 </Span>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -45,7 +45,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                                         <Label.FormattedText>
                                             <FormattedString>
 
-                                                <Span Text="#_RegDate, Converter=#S_SDate_#, ConverterParameter=dd/MM/yyyy_#" TextColor="Gray">
+                                                <Span Text="{Binding RegDate, Converter={StaticResource SDate}, ConverterParameter='dd/MM/yyyy'}" TextColor="Gray">
                                                 </Span>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -79,7 +79,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                                     <Label Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" FontSize="Small" FontAttributes="Bold">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="#_MatchValue, Converter=#S_SValue_#">
+                                                <Span Text="{Binding MatchValue, Converter={StaticResource SValue}, ConverterParameter='#,###.##'}">
                                                 </Span>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -88,7 +88,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                                         <Label.FormattedText>
                                             <FormattedString>
 
-                                                <Span Text="#_ReleasedBy, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.HR.EMP|Description_#" TextColor="Gray">
+                                                <Span Text="{Binding ReleasedBy, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.HR.EMP|Description'}" TextColor="Gray">
                                                 </Span>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -108,7 +108,7 @@ xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Co
                             <ce:DataEditor DataName="AnalM0" LookupUrl="pbs.BO.RE.PRJ" Display="Name" />
                             <ce:DataEditor DataName="SuppCode" LookupUrl="pbs.BO.CRM.CUS" Display="Name"/>
                             <ce:DataEditor DataName="PayDate"/>
-                            <ce:MemoEdit DataName="Notes" />
+                            <ce:MemoEdit DataName="ExtDesc1" />
                         </StackLayout>
 
                     </StackLayout>

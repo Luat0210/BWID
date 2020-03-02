@@ -19,32 +19,32 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Employee Code:" FontAttributes="Bold">
+                <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Code:" FontAttributes="Bold">
 
                 </Label>
                 <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="#_EmplCode_#" FontAttributes="Bold">
 
                 </Label>
-                <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Employee Name:">
+                <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Name:">
 
                 </Label>
                 <Label Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_EmplCode, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.HR.EMP|Description_#">
+                            <Span Text="{Binding EmplCode, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.HR.EMP|Description'}">
 
                             </Span>
                         </FormattedString>
                     </Label.FormattedText>
 
                 </Label>
-                <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Telephone:">
+                <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="StartAndExpand" Text="Phone:">
 
                 </Label>
                 <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_EmplCode, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.HR.EMP|CellPhone_#">
+                            <Span Text="{Binding EmplCode, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.HR.EMP|CellPhone'}">
 
                             </Span>
                         </FormattedString>
@@ -58,7 +58,7 @@
                 <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_EmplCode, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.HR.EMP|Email_#">
+                            <Span Text="{Binding EmplCode, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.HR.EMP|Email'}">
 
                             </Span>
                         </FormattedString>

@@ -38,7 +38,7 @@
                 <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_BudgetCode, Converter=#S_SLookup_#, ConverterParameter=SPC.BO.LA.BudgetCode|._#">
+                            <Span Text="{Binding BudgetCode, Converter={StaticResource SLookup}, ConverterParameter='SPC.BO.LA.BudgetCode|.'}">
 
                             </Span>
                         </FormattedString>
@@ -51,7 +51,7 @@
                 <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="#_Amount, Converter=#S_SValue_#">
+                            <Span Text="{Binding Amount, Converter={StaticResource SValue}, ConverterParameter='#,###.##'}">
 
                             </Span>
                         </FormattedString>
